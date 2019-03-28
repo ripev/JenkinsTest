@@ -3,19 +3,28 @@ pipeline {
   stages {
     stage('Begin') {
       steps {
-        echo 'Starting Pipeline'
+        timestamps() {
+          echo 'Starting Pipeline'
+        }
+
       }
     }
     stage('Clone SCM') {
       steps {
-        echo 'Cloning SCM'
-        sh 'echo Hello World'
+        timestamps() {
+          sh 'echo Hello World'
+          echo 'Cloning SCM'
+        }
+
       }
     }
     stage('Build') {
       steps {
-        echo 'Building'
-        sh 'ps aux'
+        timestamps() {
+          sh 'ps aux'
+          echo 'Building'
+        }
+
       }
     }
   }
