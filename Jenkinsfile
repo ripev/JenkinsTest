@@ -1,30 +1,19 @@
 pipeline {
   agent any
   stages {
-    stage('Begin') {
+    stage('Test') {
       steps {
         timestamps() {
-          echo 'Starting Pipeline'
+          echo 'Hello world'
         }
-
-      }
-    }
-    stage('Clone SCM') {
-      steps {
-        timestamps() {
-          sh 'echo Hello World'
-          echo 'Cloning SCM'
-        }
-
       }
     }
     stage('Build') {
       steps {
         timestamps() {
-          sh 'ps aux'
           echo 'Building'
+          sh 'ps aux'
         }
-
       }
     }
   }
