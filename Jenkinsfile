@@ -6,6 +6,7 @@ pipeline {
         timestamps() {
           echo 'Hello world'
         }
+
       }
     }
     stage('Build') {
@@ -14,6 +15,7 @@ pipeline {
           echo 'Building'
           sh 'ps aux'
         }
+
       }
     }
   }
